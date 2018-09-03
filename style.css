@@ -599,13 +599,14 @@ input[type="button"],
 	position: relative;
 	background-size: cover;
 	background-position: center;
+	overflow:hidden;
 }
 
 .posts .post + .post { margin-left: 3.95%; }
 .posts .post:nth-child(3n+1) { margin-left: 0; }
 
 .post-overlay {
-	background: #fff;
+	background:transparent;
 	position: absolute;
 	top: 0;
 	right: 0;
@@ -613,8 +614,9 @@ input[type="button"],
 	left: 0;
 }
 
-.post-overlay > video {
+.post > video {
 	height: 100%;
+	width:auto !important;
     position: absolute;
     object-fit: initial;
 }
@@ -637,12 +639,13 @@ input[type="button"],
 
 .archive-post-header {
 	position: absolute;
-	bottom: 12px;
-	left: 5px;
+	right: 30px;
+	bottom: 30px;
+	left: 30px;
 }
 
 .archive-post-title {
-	color: #ffffff;
+	color: #222;
 	font-size: 1.375em;
 	font-weight: 700;
 	line-height: 120%;

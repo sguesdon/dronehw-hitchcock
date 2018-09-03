@@ -1,8 +1,10 @@
 <?php
 	$video = false;
+	$postClasses = ['post'];
 	$meta = get_post_meta($post->ID);
 	$thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'post-thumb');
 	if(isset($meta['enclosure'])) {
+		$postClasses[] = 'has-post-thumbnail';
 		$params = explode("\n", $meta['enclosure'][0]);
 		$video = [
 			'href' => $params[0],
@@ -12,13 +14,13 @@
 ?>
 
 
-<a href="<?php the_permalink(); ?>" id="post-<?php the_ID(); ?>" <?php post_class( 'post' ); ?> style="background-image: url(<?php echo $thumb['0']; ?>);">
+<a href="<?php the_permalink(); ?>" id="post-<?php the_ID(); ?>" <?php post_class($postClasses); ?> style="background-image: url(<?php echo $thumb['0']; ?>);">
+	<?php if($video): ?>
+	<video autoplay muted loop>
+		<source src="<?php echo $video['href']; ?>" type="<?php echo $video['type']; ?>">
+	</video>
+	<?php endif; ?>
 	<div class="post-overlay">
-		<?php if($video): ?>
-		<video autoplay muted loop>
-	  		<source src="<?php echo $video['href']; ?>" type="<?php echo $video['type']; ?>">
-		</video>
-		<?php endif; ?>
 		<?php if ( is_sticky() && !is_single() ) : ?>
 		<p><span class="fa fw fa-star"></span><?php _e( 'Sticky', 'hitchcock' ); ?></p>
 		<?php endif; ?>
