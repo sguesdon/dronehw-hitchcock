@@ -95,6 +95,7 @@
 				<img src="/wp-content/uploads/2018/09/ban1.jpg" alt>
 				<img src="/wp-content/uploads/2018/09/ban2.jpg" alt>
 				<img src="/wp-content/uploads/2018/09/ban3.jpg" alt>
+				<img src="/wp-content/uploads/2018/09/ban4.jpg" alt>
 			</figure>
 		</div>
 
