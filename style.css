@@ -998,7 +998,8 @@ input[type="button"],
 
 .post-content {
 	font-family: 'Droid Serif', Georgia, serif;
-	color: #333;
+	font-size: 1.1em;
+	color: #ffffff;
 	position: relative;
 }
 
