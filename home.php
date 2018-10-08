@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<h1 class="title-content">Services proposés</h1>
+<h1 class="title-content">LOGO</h1>
 <div class="content section-inner">
 	<?php if ( have_posts() ) : ?>
 		<div class="posts" id="posts">
@@ -16,5 +16,4 @@
 	<div class="clear"></div>
 	<!-- <?php hitchcock_archive_navigation(); ?> -->
 </div><!-- .content -->
-<h1 class="title-content top">Un service personnalisé</h1>
 <?php get_footer(); ?>

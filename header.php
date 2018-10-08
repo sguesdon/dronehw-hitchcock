@@ -87,7 +87,7 @@
 
 		<?php $image_image_url = get_header_image() ? get_header_image() : get_template_directory_uri() . '/images/bg.jpg'; ?>
 
-		<div class="slider">
+		<!-- <div class="slider">
 			<div class="slider-header">
 				LOGO
 			</div>
@@ -97,7 +97,11 @@
 				<img src="/wp-content/uploads/2018/09/ban3.jpg" alt>
 				<img src="/wp-content/uploads/2018/09/ban4.jpg" alt>
 			</figure>
-		</div>
+		</div> -->
+		<video class="header-video" autoplay="true" loop>
+			<source src="<?php echo get_template_directory_uri() . '/images/chateau-bg.mp4' ?>" type="video/mp4" />
+		</video>
+
 
 		<div class="header-image" style="background-image: url( <?php echo $image_image_url; ?> );"></div>
 

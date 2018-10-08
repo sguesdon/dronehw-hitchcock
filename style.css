@@ -579,10 +579,11 @@ input[type="button"],
 }
 
 .header-image {
-	background-image: url(images/bg.jpg);
+	background-image: none !important;
+	/* background-image: url(images/bg.jpg);
 	background-repeat: no-repeat;
 	background-position: top center;
-	background-size: cover;
+	background-size: cover; */
 }
 
 .header-image:after {
@@ -590,14 +591,19 @@ input[type="button"],
 	display: block;
 	z-index: 2;
 	top: 0;
-	background: #1d1d1d;
+	/* background: #1d1d1d;
 	background: -moz-linear-gradient(top, rgba(29,29,29,0.2) 0%, rgba(29,29,29,1) 100%);
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(29,29,29,0.2)), color-stop(100%,rgba(29,29,29,1)));
 	background: -webkit-linear-gradient(top, rgba(29,29,29,0.2) 0%,rgba(29,29,29,1) 100%);
 	background: -o-linear-gradient(top, rgba(29,29,29,0.2) 0%,rgba(29,29,29,1) 100%);
 	background: -ms-linear-gradient(top, rgba(29,29,29,0.2) 0%,rgba(29,29,29,1) 100%);
 	background: linear-gradient(to bottom, rgba(29,29,29,0.2) 0%,rgba(29,29,29,1) 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#331d1d1d', endColorstr='#1d1d1d',GradientType=0 );
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#331d1d1d', endColorstr='#1d1d1d',GradientType=0 ); */
+}
+
+.header-video {
+	position:absolute;
+	width:100%;
 }
 
 

@@ -9,25 +9,25 @@
 if ( ! function_exists( 'hitchcock_setup' ) ) {
 
 	function hitchcock_setup() {
-		
+
 		// Automatic feed
 		add_theme_support( 'automatic-feed-links' );
-		
+
 		// Set content-width
 		global $content_width;
 		if ( ! isset( $content_width ) ) $content_width = 600;
-		
+
 		// Post thumbnails
 		add_theme_support( 'post-thumbnails' );
 		add_image_size( 'post-image', 1240, 9999 );
 		add_image_size( 'post-thumb', 508, 9999 );
-		
+
 		// Title tag
 		add_theme_support( 'title-tag' );
 
 		// Custom logo
 		add_theme_support( 'custom-logo' );
-		
+
 		// Custom header
 		$args = array(
 			'width'         => 1440,
@@ -35,13 +35,13 @@ if ( ! function_exists( 'hitchcock_setup' ) ) {
 			'default-image' => get_template_directory_uri() . '/images/bg.jpg',
 			'uploads'       => true,
 			'header-text'  	=> false
-			
+
 		);
 		add_theme_support( 'custom-header', $args );
-		
+
 		// Post formats
 		add_theme_support( 'post-formats', array( 'gallery' ) );
-			
+
 		// Jetpack infinite scroll
 		add_theme_support( 'infinite-scroll', array(
 			'type' 		=> 'click',
@@ -49,20 +49,20 @@ if ( ! function_exists( 'hitchcock_setup' ) ) {
 			'wrapper'	=> false,
 			'footer' 	=> false,
 		) );
-		
+
 		// Add nav menu
 		register_nav_menu( 'primary', __( 'Primary Menu', 'hitchcock' ) );
 		register_nav_menu( 'social', __( 'Social Menu', 'hitchcock' ) );
-		
+
 		// Make the theme translation ready
 		load_theme_textdomain( 'hitchcock', get_template_directory() . '/languages' );
-		
+
 		$locale = get_locale();
 		$locale_file = get_template_directory() . "/languages/$locale.php";
 		if ( is_readable($locale_file) ) {
 			require_once($locale_file);
 		}
-		
+
 	}
 	add_action( 'after_setup_theme', 'hitchcock_setup' );
 
@@ -78,14 +78,14 @@ if ( ! function_exists( 'hitchcock_load_javascript_files' ) ) {
 
 	function hitchcock_load_javascript_files() {
 
-		if ( ! is_admin() ) {		
+		if ( ! is_admin() ) {
 			wp_register_script( 'hitchcock_flexslider', get_template_directory_uri() . '/js/flexslider.js', '', true );
 			wp_register_script( 'hitchcock_doubletaptogo', get_template_directory_uri() . '/js/doubletaptogo.js', '', true );
 
 			wp_enqueue_script( 'hitchcock_global', get_template_directory_uri() . '/js/global.js', array( 'jquery', 'hitchcock_flexslider', 'hitchcock_doubletaptogo' ), '', true );
-			
+
 			if ( is_singular() ) wp_enqueue_script( 'comment-reply' );
-			
+
 		}
 	}
 	add_action( 'wp_enqueue_scripts', 'hitchcock_load_javascript_files' );
@@ -104,7 +104,7 @@ if ( ! function_exists( 'hitchcock_load_style' ) ) {
 		if ( ! is_admin() ) {
 			wp_register_style( 'hitchcock_google_fonts', '//fonts.googleapis.com/css?family=Montserrat:400,700|Droid+Serif:400,400italic,700,700italic' );
 			wp_register_style( 'hitchcock_fontawesome', get_stylesheet_directory_uri() . '/fa/css/font-awesome.css' );
-			
+
 			wp_enqueue_style( 'hitchcock_style', get_stylesheet_uri(), array( 'hitchcock_google_fonts', 'hitchcock_fontawesome' ) );
 		}
 	}
@@ -153,19 +153,19 @@ if ( ! function_exists( 'hitchcock_html_js_class' ) ) {
 if ( ! function_exists( 'hitchcock_archive_navigation' ) ) {
 
 	function hitchcock_archive_navigation() {
-		
+
 		global $wp_query;
-		
+
 		if ( $wp_query->max_num_pages > 1 ) : ?>
-					
+
 			<div class="archive-nav">
-				
-				<?php 
+
+				<?php
 				if ( get_previous_posts_link() ) {
 					previous_posts_link( '<span class="fa fw fa-angle-left"></span>' );
 				} else {
 					echo '<span class="fa fw fa-angle-left"></span>';
-				} 
+				}
 
 				echo '<span class="sep">/</span>';
 
@@ -173,13 +173,13 @@ if ( ! function_exists( 'hitchcock_archive_navigation' ) ) {
 					next_posts_link( '<span class="fa fw fa-angle-right"></span>' );
 				} else {
 					echo '<span class="fa fw fa-angle-right"></span>';
-				} 
+				}
 				?>
-				
+
 				<div class="clear"></div>
-					
+
 			</div><!-- .archive-nav-->
-							
+
 		<?php endif;
 	}
 
@@ -197,7 +197,7 @@ if ( ! function_exists( 'hitchcock_custom_logo' ) ) {
 
 		// Get the logo
 		$logo = wp_get_attachment_image_src( get_theme_mod( 'custom_logo' ), 'full' );
-		
+
 		if ( $logo ) {
 
 			// For clarity
@@ -212,7 +212,7 @@ if ( ! function_exists( 'hitchcock_custom_logo' ) ) {
 			}
 
 			?>
-			
+
 			<a href="<?php echo esc_url( home_url() ); ?>" title="<?php bloginfo( 'name' ); ?>" class="custom-logo-link">
 				<img src="<?php echo esc_url( $logo_url ); ?>" width="<?php echo esc_attr( $logo_width ); ?>" height="<?php echo esc_attr( $logo_height ); ?>" />
 			</a>
@@ -250,11 +250,11 @@ if ( ! function_exists( 'hitchcock_admin_css' ) ) {
    BODY CLASSES
    --------------------------------------------------------------------------------------------- */
 
- 
+
 if ( ! function_exists( 'hitchcock_body_classes' ) ) {
 
 	function hitchcock_body_classes( $classes ) {
-	
+
 		// Check if we're on singular
 		if ( is_singular() || is_404() || ( is_search() && ! have_posts() ) ) {
 			$classes[] = 'post single';
@@ -274,7 +274,7 @@ if ( ! function_exists( 'hitchcock_body_classes' ) ) {
 		if ( wp_is_mobile() ) {
 			$classes[] = 'wp-is-mobile';
 		}
-		
+
 		return $classes;
 	}
 	add_filter( 'body_class', 'hitchcock_body_classes' );
@@ -304,25 +304,25 @@ if ( ! function_exists( 'hitchcock_flexslider' ) ) {
 		) );
 
 		if ( $images ) { ?>
-		
+
 			<div class="flexslider">
-			
+
 				<ul class="slides">
-		
-					<?php foreach( $images as $image ) { 
-					
+
+					<?php foreach( $images as $image ) {
+
 						$attimg = wp_get_attachment_image( $image->ID, $size ); ?>
-						
+
 						<li>
 							<?php echo $attimg; ?>
 						</li>
-						
+
 					<?php } ?>
-			
+
 				</ul>
-				
+
 			</div><?php
-			
+
 		}
 	}
 
@@ -337,9 +337,9 @@ if ( ! function_exists( 'hitchcock_flexslider' ) ) {
 if ( ! function_exists( 'hitchcock_related_posts' ) ) {
 
 	function hitchcock_related_posts( $number_of_posts = 3 ) { ?>
-		
+
 		<div class="related-posts posts section-inner">
-					
+
 			<?php
 
 			global $post;
@@ -350,7 +350,7 @@ if ( ! function_exists( 'hitchcock_related_posts' ) ) {
 				'meta_key'				=>	'_thumbnail_id',
 				'posts_per_page'		=>	$number_of_posts,
 				'post_status'			=>	'publish',
-				'post__not_in'			=>	array( $post->ID ),	
+				'post__not_in'			=>	array( $post->ID ),
 			);
 
 			// Create a query for posts in the same category as the ones for the current post
@@ -363,7 +363,7 @@ if ( ! function_exists( 'hitchcock_related_posts' ) ) {
 			}
 
 			$term_posts_args = array_merge( $base_args, array( 'category__in' => $cat_ids ) );
-			
+
 			$related_posts = get_posts( $term_posts_args );
 
 			// No results for the categories? Get random posts instead
@@ -377,9 +377,9 @@ if ( ! function_exists( 'hitchcock_related_posts' ) ) {
 
 			// If either the category query or random query hit pay dirt, output the posts
 			if ( $related_posts ) :
-				
+
 				foreach( $related_posts as $post ) :
-			
+
 					setup_postdata( $post );
 
 					get_template_part( 'content', get_post_format() );
@@ -387,17 +387,17 @@ if ( ! function_exists( 'hitchcock_related_posts' ) ) {
 				endforeach;
 
 				wp_reset_postdata();
-			
+
 			endif;
-			
+
 			?>
-					
+
 			<div class="clear"></div>
 
-		</div><!-- .related-posts --> 
+		</div><!-- .related-posts -->
 
 		<?php
-		
+
 	}
 
 }
@@ -416,11 +416,11 @@ if ( ! function_exists( 'hitchcock_comment' ) ) {
 			case 'pingback' :
 			case 'trackback' :
 		?>
-		
+
 		<li <?php comment_class(); ?> id="comment-<?php comment_ID(); ?>">
-		
+
 			<?php __( 'Pingback:', 'hitchcock' ); ?> <?php comment_author_link(); ?> <?php edit_comment_link( __( 'Edit', 'hitchcock' ), '<span class="edit-link">', '</span>' ); ?>
-			
+
 		</li>
 		<?php
 				break;
@@ -428,9 +428,9 @@ if ( ! function_exists( 'hitchcock_comment' ) ) {
 			global $post;
 		?>
 		<li <?php comment_class(); ?> id="li-comment-<?php comment_ID(); ?>">
-		
+
 			<div id="comment-<?php comment_ID(); ?>" class="comment">
-				
+
 				<h4 class="comment-title">
 					<?php echo get_comment_author_link(); ?>
 					<span><a class="comment-date-link" href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ) ?>" title="<?php echo get_comment_date() . ' at ' . get_comment_time(); ?>"><?php echo get_comment_date( get_option( 'date_format' ) ); ?></a>
@@ -442,37 +442,37 @@ if ( ! function_exists( 'hitchcock_comment' ) ) {
 					?>
 					</span>
 				</h4>
-										
-				<div class="comment-content post-content">
-				
-					<?php comment_text(); ?>
-					
-				</div><!-- .comment-content -->
-				
-				<div class="comment-actions">
-								
-					<?php 
 
-					comment_reply_link( array( 
+				<div class="comment-content post-content">
+
+					<?php comment_text(); ?>
+
+				</div><!-- .comment-content -->
+
+				<div class="comment-actions">
+
+					<?php
+
+					comment_reply_link( array(
 						'reply_text' 	=> __( 'Reply', 'hitchcock' ),
-						'depth'			=> $depth, 
+						'depth'			=> $depth,
 						'max_depth' 	=> $args['max_depth'],
 						'before'		=> '',
 						'after'			=> ''
-					) ); 
+					) );
 
 					edit_comment_link( __( 'Edit', 'hitchcock' ), '', '' );
-					
+
 					if ( 0 == $comment->comment_approved ) : ?>
-					
+
 						<p class="comment-awaiting-moderation fright"><?php _e( 'Your comment is awaiting moderation.', 'hitchcock' ); ?></p>
-						
+
 					<?php endif; ?>
-									
+
 				</div><!-- .comment-actions -->
-											
+
 			</div><!-- .comment-## -->
-					
+
 		<?php
 			break;
 		endswitch;
@@ -537,7 +537,7 @@ class hitchcock_customize {
 
 		$wp_customize->add_control( 'hitchcock_show_titles', array(
 			'type' 			=> 'checkbox',
-			'section' 		=> 'hitchcock_options', 
+			'section' 		=> 'hitchcock_options',
 			'label' 		=> __( 'Show Preview Titles', 'hitchcock' ),
 			'description' 	=> __( 'Check to always show the titles in the post previews.', 'hitchcock' ),
 		) );
@@ -547,16 +547,16 @@ class hitchcock_customize {
 
 
 		$wp_customize->add_setting( 'hitchcock_accent_color', array(
-			'default' 			=> '#3bc492', 
-			'type' 				=> 'theme_mod', 
-			'transport' 		=> 'postMessage', 
+			'default' 			=> '#3bc492',
+			'type' 				=> 'theme_mod',
+			'transport' 		=> 'postMessage',
 			'sanitize_callback' => 'sanitize_hex_color'
 		) );
 
 		$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hitchcock_accent_color', array(
-			'label' 	=> __( 'Accent Color', 'hitchcock' ), 
+			'label' 	=> __( 'Accent Color', 'hitchcock' ),
 			'section' 	=> 'hitchcock_options',
-			'settings' 	=> 'hitchcock_accent_color', 
+			'settings' 	=> 'hitchcock_accent_color',
 		) ) );
 
 		// Make built-in controls use live-JS preview
@@ -576,10 +576,10 @@ class hitchcock_customize {
 	public static function hitchcock_header_output() {
 		?>
 
-		<!-- Customizer CSS --> 
+		<!-- Customizer CSS -->
 
 		<style type="text/css">
-		
+
 			<?php self::hitchcock_generate_css( 'body a', 'color', 'hitchcock_accent_color' ); ?>
 			<?php self::hitchcock_generate_css( 'body a:hover', 'color', 'hitchcock_accent_color' ); ?>
 			<?php self::hitchcock_generate_css( '.blog-title a:hover', 'color', 'hitchcock_accent_color' ); ?>
@@ -611,7 +611,7 @@ class hitchcock_customize {
 			<?php self::hitchcock_generate_css( '.nav-toggle.active .bar', 'background-color', 'hitchcock_accent_color' ); ?>
 			<?php self::hitchcock_generate_css( '.mobile-menu a:hover', 'color', 'hitchcock_accent_color' ); ?>
 
-		</style> 
+		</style>
 
 		<!-- /Customizer CSS -->
 
@@ -626,7 +626,7 @@ class hitchcock_customize {
 		$return = '';
 		$mod = get_theme_mod( $mod_name );
 
-		if ( ! empty( $mod ) ) { 
+		if ( ! empty( $mod ) ) {
 
 			$return = sprintf( '%s { %s:%s; }', $selector, $style, $prefix . $mod . $postfix );
 
@@ -646,5 +646,8 @@ add_action( 'wp_head', array( 'hitchcock_customize', 'hitchcock_header_output' )
 
 // Enqueue live preview javascript in Theme Customizer admin screen
 add_action( 'customize_preview_init', array( 'hitchcock_customize', 'hitchcock_live_preview' ) );
+
+
+
 
 ?>
