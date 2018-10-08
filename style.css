@@ -779,8 +779,7 @@ input[type="button"],
 
 
 .post-inner {
-	width: 520px;
-	max-width: 85%;
+	width: 100%;
 	margin: 0 0;
 	padding: 80px 0 90px;
 }
