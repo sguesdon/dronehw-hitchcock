@@ -98,8 +98,9 @@
 				<img src="/wp-content/uploads/2018/09/ban4.jpg" alt>
 			</figure>
 		</div> -->
-		<video class="header-video" autoplay="true" loop>
-			<source src="<?php echo get_template_directory_uri() . '/images/chateau-bg.mp4' ?>" type="video/mp4" />
+		<video class="header-video" autoplay="true" mute="true" loop>
+			<source src="<?php echo get_template_directory_uri() . '/images/chateau_canges.mp4' ?>" type="video/mp4" />
+			<source src="<?php echo get_template_directory_uri() . '/images/chateau_canges.webm' ?>" type="video/webm" />
 		</video>
 
 
