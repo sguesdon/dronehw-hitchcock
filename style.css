@@ -603,7 +603,8 @@ input[type="button"],
 
 .header-video {
 	position:absolute;
-	width:100%;
+	width:100% !important;
+	height:auto !important;
 }
 
 
