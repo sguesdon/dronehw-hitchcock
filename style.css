@@ -607,6 +607,15 @@ input[type="button"],
 	height:auto !important;
 }
 
+.video-container > .shadow {
+	-webkit-box-shadow: inset 0px -120px 75px -83px rgba(0,0,0,1);
+	-moz-box-shadow: inset 0px -120px 75px -83px rgba(0,0,0,1);
+	box-shadow: inset 0px -120px 75px -83px rgba(0,0,0,1);
+	height:120px;
+	width:100%;
+	bottom:0px;
+}
+
 
 /* -------------------------------------------------------------------------------- */
 /*	5. Blog

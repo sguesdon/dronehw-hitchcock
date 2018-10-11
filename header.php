@@ -87,21 +87,28 @@
 
 		<?php $image_image_url = get_header_image() ? get_header_image() : get_template_directory_uri() . '/images/bg.jpg'; ?>
 
-		<!-- <div class="slider">
+		<div class="slider">
 			<div class="slider-header">
 				LOGO
 			</div>
 			<figure>
-				<img src="/wp-content/uploads/2018/09/ban1.jpg" alt>
-				<img src="/wp-content/uploads/2018/09/ban2.jpg" alt>
-				<img src="/wp-content/uploads/2018/09/ban3.jpg" alt>
-				<img src="/wp-content/uploads/2018/09/ban4.jpg" alt>
+				<img src="<?php echo get_template_directory_uri() ?>/images/carroussel/2.jpg" alt>
+				<img src="<?php echo get_template_directory_uri() ?>/images/carroussel/3.jpg" alt>
+				<img src="<?php echo get_template_directory_uri() ?>/images/carroussel/5.jpg" alt>
+				<img src="<?php echo get_template_directory_uri() ?>/images/carroussel/7.jpg" alt>
+				<!-- <img src="<?php echo get_template_directory_uri() ?>/images/carroussel/4.jpg" alt> -->
+				<!-- <img src="<?php echo get_template_directory_uri() ?>/images/carroussel/1.jpg" alt> -->
+				<!-- <img src="<?php echo get_template_directory_uri() ?>/images/carroussel/6.jpg" alt> -->
+				<!-- <img src="<?php echo get_template_directory_uri() ?>/images/carroussel/8.jpg" alt> -->
 			</figure>
+		</div>
+		<!-- <div class="video-container">
+			<video class="header-video" autoplay="true" mute="true" loop>
+				<source src="<?php echo get_template_directory_uri() . '/images/chateau_canges.mp4' ?>" type="video/mp4" />
+				<source src="<?php echo get_template_directory_uri() . '/images/chateau_canges.webm' ?>" type="video/webm" />
+			</video>
+			<div class="shadow"></div>
 		</div> -->
-		<video class="header-video" autoplay="true" mute="true" loop>
-			<source src="<?php echo get_template_directory_uri() . '/images/chateau_canges.mp4' ?>" type="video/mp4" />
-			<source src="<?php echo get_template_directory_uri() . '/images/chateau_canges.webm' ?>" type="video/webm" />
-		</video>
 
 
 		<div class="header-image" style="background-image: url( <?php echo $image_image_url; ?> );"></div>
