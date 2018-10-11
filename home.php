@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<h1 class="title-content">LOGO</h1>
+<h1 class="title-content">Nos prestations</h1>
 <div class="content section-inner">
 	<?php if ( have_posts() ) : ?>
 		<div class="posts" id="posts">

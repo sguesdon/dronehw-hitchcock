@@ -89,7 +89,7 @@
 
 		<div class="slider">
 			<div class="slider-header">
-				LOGO
+				
 			</div>
 			<figure>
 				<img src="<?php echo get_template_directory_uri() ?>/images/carroussel/2.jpg" alt>
