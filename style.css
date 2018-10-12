@@ -579,11 +579,10 @@ input[type="button"],
 }
 
 .header-image {
-	background-image: none !important;
-	/* background-image: url(images/bg.jpg);
+	background-image: url(images/bg.jpg);
 	background-repeat: no-repeat;
 	background-position: top center;
-	background-size: cover; */
+	background-size: cover;
 }
 
 .header-image:after {
