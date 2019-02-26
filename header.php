@@ -89,8 +89,8 @@
 
 		<div class="slider">
 			<div class="slider-header">
-				
-			</div>
+                <img src="/wp-content/uploads/2019/02/46483053_346200979515792_5515694776453693440_n.png" alt="logo">
+            </div>
 			<figure>
 				<img src="<?php echo get_template_directory_uri() ?>/images/carroussel/2.jpg" alt>
 				<img src="<?php echo get_template_directory_uri() ?>/images/carroussel/3.jpg" alt>

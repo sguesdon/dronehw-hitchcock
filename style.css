@@ -217,6 +217,17 @@ input[type="button"],
 	 transition: all 0.3s ease-in-out;
 }
 
+.post-embed {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+.post-embed > iframe {
+    height:100% !important;
+}
+
 
 /* -------------------------------------------------------------------------------- */
 /*	3. Navigation
@@ -1953,12 +1964,17 @@ div.slider figure {
 	animation: 30s slidy infinite;
 }
 
+div.slider-header > img {
+    height:140px;
+    margin:5px auto;
+    width:auto;
+}
+
 div.slider > div.slider-header {
-	height: 120px;
+	height: 150px;
     position: absolute;
     width: 100%;
-    opacity: 0.5;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.7);
     z-index: 3;
 	text-align:center;
 	color:#ffffff;
