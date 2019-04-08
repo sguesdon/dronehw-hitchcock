@@ -1,0 +1,52 @@
+[
+    {
+        "src" : "aussois.png",
+        "href": "http://www.aussois.com/",
+        "title": "Aussois"
+    },
+    {
+        "src" : "enki.png",
+        "href": "https://www.enki-cosmetic.com/",
+        "title": "Enki"
+    },
+    {
+        "src" : "kikao.png",
+        "href": "https://kikao.net/",
+        "title": "Kikao"
+    },
+    {
+        "src" : "logo-mediatheque-cange.png",
+        "href": "http://bibliotheque.ville-saint-avertin.fr/medias/medias.aspx?INSTANCE=EXPLOITATION",
+        "title": "Médiathèque de Cangé"
+    },
+    {
+        "src" : "natureo.png",
+        "href": "http://parc-natureo.fr/",
+        "title": "Natureo"
+    },
+    {
+        "src" : "nid.png",
+        "href": "https://www.facebook.com/nicolas.viau.167",
+        "title": "NID"
+    },
+    {
+        "src" : "saintavertin.jpg",
+        "href": "https://www.facebook.com/nicolas.viau.167",
+        "title": "Saint Avertin"
+    },
+    {
+        "src" : "skywatcher.jpg",
+        "href": "https://www.skywatcherpictures.com/",
+        "title": "SkyWatcher"
+    },
+    {
+        "src" : "termes_luynes.png",
+        "href": "https://www.lesthermesdeluynes.fr/",
+        "title": "Thèrmes de Luynes"
+    },
+    {
+        "src" : "villedeblois.jpg",
+        "href": "https://www.blois.fr/",
+        "title" : "Ville de Blois"
+    }
+]

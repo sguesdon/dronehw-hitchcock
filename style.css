@@ -2391,3 +2391,42 @@ div.slider > div.slider-header {
 
 
 }
+
+
+/* div.content.section-inner > .left-col,
+div.content.section-inner > .right-col {
+    float:left;
+    padding:8px;
+} */
+
+div.content.section-inner > .left-col p,
+div.content.section-inner > .right-col p {
+    text-align:justify;
+    color:#fff;
+    padding:8px;
+    background-color: rgb(255, 255, 255, 0.1);
+}
+
+/* div.content.section-inner > .left-col {
+    width:40%;
+}
+
+div.content.section-inner > .right-col {
+    width:60%;
+} */
+
+@media ( max-width: 600px ) {
+    div.content.section-inner > .left-col,
+    div.content.section-inner > .right-col {
+        float:none;
+        width:100%;
+    }
+    .has-post-thumbnail .post-overlay {
+        background: rgba( 0, 0, 0, 0.75 );
+        opacity: 1;
+        color:#fff;
+    }
+    .archive-post-title {
+        color:#fff;
+    }
+}
