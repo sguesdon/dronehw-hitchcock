@@ -3,7 +3,12 @@
 <div class="content section-inner">
     <div class="left-col">
         <p>
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a
+            DroneHW est une entreprise polyvalente capable de travailler dans le domaine audiovisuel et technique.
+            Les  clips, vidéos promotionnelles de sociétés, vidéos de mariages ou photos pourraient être la valeur ajoutée de vos projets audiovisuels.
+            Avec une flotte de drones optimisés pour les services techniques nous sommes capables d’inspecter les moindres recoins, clochers d’églises, ponts, nous irons là où vous en avez besoin.
+            Grâce à leurs batteries longues durées (31 minutes) nous pouvons réaliser suffisamment de prises de vue afin de créer un nuage de points et ainsi réaliser de la photogrammétrie :
+            La modélisation 3D et la cartographie de surface ou de façade, vous permettront de réaliser vos mesures sur des plans à l’échelle.
+            Nos devis personnalisés seront adaptés à vos besoins, demandez nous un devis gratuit !
         </p>
     </div>
     <div class="right-col">
