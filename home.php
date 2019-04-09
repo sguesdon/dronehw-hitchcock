@@ -2,14 +2,12 @@
 <h1 class="title-content">Nos prestations</h1>
 <div class="content section-inner">
     <div class="left-col">
-        <p>
-            DroneHW est une entreprise polyvalente capable de travailler dans le domaine audiovisuel et technique.
-            Les  clips, vidéos promotionnelles de sociétés, vidéos de mariages ou photos pourraient être la valeur ajoutée de vos projets audiovisuels.
-            Avec une flotte de drones optimisés pour les services techniques nous sommes capables d’inspecter les moindres recoins, clochers d’églises, ponts, nous irons là où vous en avez besoin.
-            Grâce à leurs batteries longues durées (31 minutes) nous pouvons réaliser suffisamment de prises de vue afin de créer un nuage de points et ainsi réaliser de la photogrammétrie :
-            La modélisation 3D et la cartographie de surface ou de façade, vous permettront de réaliser vos mesures sur des plans à l’échelle.
-            Nos devis personnalisés seront adaptés à vos besoins, demandez nous un devis gratuit !
-        </p>
+        <p>DroneHW est une entreprise polyvalente capable de travailler dans le domaine audiovisuel et technique.</p>
+        <p>Les  clips, vidéos promotionnelles de sociétés, vidéos de mariages ou photos pourraient être la valeur ajoutée de vos projets audiovisuels.</p>
+        <p>Avec une flotte de drones optimisés pour les services techniques nous sommes capables d’inspecter les moindres recoins, clochers d’églises, ponts, nous irons là où vous en avez besoin.</p>
+        <p>Grâce à leurs batteries longues durées (31 minutes) nous pouvons réaliser suffisamment de prises de vue afin de créer un nuage de points et ainsi réaliser de la photogrammétrie :</p>
+        <p>La modélisation 3D et la cartographie de surface ou de façade, vous permettront de réaliser vos mesures sur des plans à l’échelle.</p>
+        <p>Nos devis personnalisés seront adaptés à vos besoins, demandez nous un devis gratuit !</p>
     </div>
     <div class="right-col">
         <?php if ( have_posts() ) : ?>
