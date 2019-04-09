@@ -2416,6 +2416,26 @@ div.content.section-inner > .right-col {
     width:60%;
 }
 
+div.content.section-inner.partners {
+    height:300px;
+}
+
+.archive-post-title {
+    color: #222;
+    font-size: 1em;
+    font-weight: 600;
+    line-height: 120%;
+    text-transform: uppercase;
+    -ms-word-break: normal !important;
+    word-break: normal !important;
+}
+
+.archive-post-header {
+    right: 5px;
+    bottom: 30px;
+    left: 5px;
+}
+
 @media ( max-width: 600px ) {
     div.content.section-inner > .left-col,
     div.content.section-inner > .right-col {
@@ -2423,7 +2443,7 @@ div.content.section-inner > .right-col {
         width:100%;
     }
     .has-post-thumbnail .post-overlay {
-        background: rgba( 0, 0, 0, 0.75 );
+        background: rgba( 0, 0, 0, 0.35 );
         opacity: 1;
         color:#fff;
     }
